@@ -1,0 +1,25 @@
+body {
+    background-color: burlywood;
+}
+
+h1 {
+    font-family: "American Typewriter";
+}
+
+h3 {
+    font-family: "Andale Mono";
+}
+
+.my-text-color {
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+ul {
+    color: #2297cd;
+}
+
+ol {
+    color: #c9135e;
+}

@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* COLORS and FONTS */
+body {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    line-height: 4;
+    display: grid;
+}
+header {
+    background: rgb(20, 150, 155);
+}
+
+
+nav{
+    display: flex;
+    flex-wrap: nowrap;
+    background: rgb(4, 14, 3);
+  }
+  
+nav > div {
+width: 100px;
+margin: 10px;
+text-align: center;
+line-height: 75px;
+font-size: 30px;
+}
+
+
+.left-sidebar,.right-sidebar
+{
+    text-align: left;
+    width: 50%;
+}
+main
+{
+    width: 100%;
+}
+   
+main {
+  
+    background: rgb(61, 61, 61);
+}
+
+.left-sidebar {
+   
+    background: rgb(76, 77, 78);
+}
+.right-sidebar {
+   
+    background: rgb(130, 138, 130);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    color: rgb(7, 6, 6);
+    flex-flow: row wrap;
+}
+
+footer {
+    background: rgb(4, 14, 3);
+    color: white;
+
+}
+
+@media all and (min-width: 600px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;    
+    } 
+    header, 
+    footer {
+        width: 100%;
+    }
+    main {
+        flex: 2;
+        order: 2;
+        min-height: 80vh;
+        background: rgb(61, 61, 61);
+    }
+    
+    .left-sidebar {
+        order: 1;
+        flex: 2;
+        background: rgb(76, 77, 78);
+    }
+    .right-sidebar {
+        flex: 2;
+        order: 3;
+        background: rgb(130, 138, 130);
+    }
+    footer {
+        order: 4;
+        background: rgb(4, 14, 3);
+        color: white;
+    
+    }
+}

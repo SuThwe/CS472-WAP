@@ -1,0 +1,21 @@
+header {
+    font-size: 2em;
+    background-color: #8eb9da;
+    max-width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+    font-weight: 700;
+}
+
+footer {
+    background-color: rgb(4, 14, 3);
+    max-width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+    color: white
+}
+
+.container-fluid
+{
+    background-color:  rgb(4, 14, 3);
+}

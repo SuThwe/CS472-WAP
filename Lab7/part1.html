@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab 7 - Part1</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // initialize mocha
+        mocha.setup('bdd');
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+
+    </script>
+
+    <script>
+        function sum(arr) {
+            return arr.reduce((x, y) => x + y );
+        }
+
+        function multiply(arr) {
+            return arr.reduce((x, y) => x * y);
+        }
+        
+        function reverse(str) {
+            return str.split("").reverse().join("");
+        }
+        
+        function filterLongWords(i, arr) {
+            return arr.filter((x) => (x.length > i) );
+        }
+    </script>
+
+    <script>
+
+        describe("sum()", function () {
+            it("return 5 if given 2 + 3", function () {
+                assert.equal(sum([2, 3]), 5);
+            });
+        });
+
+        describe("multiply()", function () {
+            it("return 10 if given 2*5", function () {
+                assert.equal(multiply([2, 5]), 10);
+            });
+        });
+
+        describe("reverse()", function () {
+            it("return 'dcba' if given 'abcd'", function () {
+                assert.equal(reverse("abcd"), "dcba");
+            });
+        });
+
+        describe("filterLongWords()", function () {
+            it("return [\"apple\", \"orange\"] if given [\"apple\", \"nut\", \"orange\"]", function () {
+                assert.deepEqual(filterLongWords(3, ["apple", "nut", "orange"]), ["apple", "orange"]);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+<div id="mocha"></div>
+<script>
+    mocha.run();
+
+</script>
+</body>
+
+</html>
