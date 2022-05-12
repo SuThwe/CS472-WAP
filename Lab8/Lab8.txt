@@ -1,0 +1,96 @@
+Answer 1:
+var add = (function() {
+	var counter = 0;
+	return {
+		add: function() {
+		  counter++;
+		},
+		reset : function() {
+		  counter = 0;
+		}
+	};
+})();
+
+
+Answer 2:
+free variable is "counter"
+Free variable: A variable referred to by a function that is not one of its parameters or local variables.
+
+
+Answer 3:
+var makeAdder = function (increment) {
+    var counter = 0;
+    return function () {
+      return counter += increment;
+    }
+};
+var add5 =makeAdder(5);
+add5();
+add5();
+add5();
+
+
+Answer 4: By using module patter
+
+
+Answer 5:
+var empModule = (function() {
+  var name
+  var age
+  var salary
+
+  var getAge = function getAge() {
+    return age;
+  }
+  var getName = function getAge() {
+    return name;
+  }
+  var getSalary = function getAge() {
+    return salary;
+  }
+
+  var setAge = function (age) {
+    this.age = age;
+  }
+
+  var setName = function (name) {
+    this.name = name;
+  }
+
+  var setSalary = function (salary) {
+    this.salary = salary;
+  }
+
+  var increaseSalary = function (percent) {
+    setSalary(getSalary * (1 + percent / 100))
+
+  }
+
+  var incrementAge = function (years) {
+    setAge(getAge + years)
+  }
+
+  var print = function () {
+    var n = getName
+    console.log("name" + n + "age" + getAge + "salary" + getSalary)
+  }
+
+  return {
+    setAge: setAge,
+    setName: setName,
+    setSalary: setName,
+    increaseSalary: increaseSalary,
+    incrementAge: incrementAge,
+    print: print
+  }
+})()
+
+
+Answer 6:
+empModule.address;
+empModule.setAddress = function(newAddress) {
+  return address = newAddress;
+};
+empModule.getAddress = function() {
+  return address;
+}
